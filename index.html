@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html lang="PT">
+	<head>
+		<title>Francisca e Rodrigo</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+    <body>
+        <div class="video-container">
+            <img src="images/regift.gif" alt="Animated GIF">
+        </div>
+        
+        <!-- Content Wrapper -->
+        <div id="page-wrapper" class="d-flex align-items-center justify-content-center text-center">
+            <div class="container" id="textdiv">
+                <h1 class="text-white">Francisca & Rodrigo</h1>
+                <p class="lead text-light" id="demo"></p>
+            </div>
+        </div>           
+
+        <script>
+            // Set the date we're counting down to
+            var countDownDate = new Date("May 31, 2025 17:00:00").getTime();
+
+            // Update the count down every 1 second
+            var x = setInterval(function() {
+
+                // Get today's date and time
+                var now = new Date().getTime();
+
+                // Find the distance between now and the count down date
+                var distance = countDownDate - now;
+
+                // Time calculations for days, hours, minutes, and seconds
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                // Display the result in the element with id="demo"
+                if (distance < 0) {
+                    document.getElementById("demo").innerHTML = 0 + " dias " + 0 + ":" + 0 + ":" + 0;
+                } else {
+                    document.getElementById("demo").innerHTML = days + " dias " + hours + ":" + minutes + ":" + seconds;
+                }
+            }, 1000);
+        </script>
+
+        <!-- Two -->
+        <div class="container-fluid" id="two">
+            <div class="row align-items-center justify-content-center text-center">
+                <h2> A NOSSA HISTÓRIA </h2>
+            </div>
+            <div class="row align-items-center justify-content-center text-center">
+                <p> Lorum ipsum cenas mais cenas </p>
+            </div>
+        </div>
+
+        <!-- One -->
+        <div class="container-fluid" id="one">
+            <div class="row align-items-center justify-content-center text-center">
+                <h2> O NOSSO CASAMENTO </h2>
+            </div>
+            <div class="row align-items-center justify-content-center text-center">
+                <div class="col-md-6">
+                    <p>Info info info</p>
+                    <img src="images/Capela_de_Rio_Frio.jpg" alt="capela" class="img-fluid w-50 h-50"/>
+                </div>
+                <div class="col-md-6">
+                    <p>info info info</p>
+                    <img src="images/caminho.jpg" alt="caminho" class="img-fluid w-50 h-50"/>
+                </div>
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <a href="https://maps.app.goo.gl/WbASEQsC8aPG6BYu5" type="button" class="btn btn-lg btn-outline-secondary" tabindex="-1" role="button" aria-disabled="true">Como Chegar</a>
+                        
+
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Three -->
+        <div class="container-fluid" id="three">
+            <div class="row align-items-center justify-content-center text-center">
+                <h2> LISTA DE PRESENTES </h2>
+            </div>
+            <div class="row align-items-center justify-content-center text-center">
+                <p> Claro que o mais importante é podermos contar com a vossa presença neste dia especial!
+                    <br>
+                Ainda assim, se nos quiserem ajudar a mobilar a nossa casa ou contribuir para a nossa lua de mel, deixamos aqui algumas sugestões.
+                </p>
+                <form action="">
+
+                </form>
+            </div>
+            <div class="row align-items-center justify-content-center text-center">
+                <h2> LUA DE MEL </h2>
+                <p> Vamos começar esta nova aventura em terras africanas, numa lua de mel com paisagens únicas e memoráveis!</p>
+                <div class="col-md-3">
+                    <img src="https://www.voyemo.com/wp-content/uploads/2020/05/Namibia-13-main.jpg" alt="namibia desert" style="height: 20vh;">
+                </div>
+                <div class="col-md-3">
+                    <img src="https://www.vjv.com/media/rrrbmpeb/deadvlei-namibia-shutterstock_421198501.jpg" alt="trees" style="height: 20vh;">
+                </div>
+                <div class="col-md-3">
+                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/1c/67/df/d7/pool-in-main-area-at.jpg" alt="resort" style="height: 20vh;">
+                </div>
+                <div class="col-md-3">
+                    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/2e/9e/ad/safaris-offer-close-up.jpg?w=1200&h=-1&s=1" alt="tour" style="height: 20vh;">
+                </div>
+            </div>
+        </div>
+        
+        <!-- Confirm Presence -->
+        <div class="container-fluid" id="four">
+            <div class="row align-items-center justify-content-center text-center">
+                <h2> CONFIRMAR PRESENÇA </h2>
+            </div>
+            <div class="row">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdFp9glsNTivmbYO9Wwc0Q7iuYzYRfPv3pU18zesemlpvMaWw/viewform?embedded=true" width="640" height="998" frameborder="0" marginheight="0" marginwidth="0">A carregar…</iframe>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p> &copy; Pipa Rocha Design </p>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/scriptinho.js"></script>
+    </body>
+</html>

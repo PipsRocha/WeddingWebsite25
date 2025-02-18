@@ -1,0 +1,127 @@
+/* Import Bootstrap */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css");
+
+html {
+    height: 100%;
+    overflow: auto;
+}
+/* General Body Styling */
+
+body {
+    background-color: #D2A544;
+    color: #F6F3E6;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+	height: 100%;
+}
+
+/* Background Video */
+/* Ensure the video-container takes full viewport width and height */
+.video-container {
+    position: fixed;  /* Fix the video to the background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;  /* Cover the full screen */
+    overflow: hidden;  /* Ensure no overflow of the video */
+    z-index: -1;  /* Place it behind the content */
+}
+
+/* Make sure the image/video covers the background and doesn't distort */
+.video-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ensure the image/video fills the area while maintaining its aspect ratio */
+    object-position: center;  /* Center the image/video */
+}
+
+.video-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+
+/* Page Wrapper (to center the content) */
+#page-wrapper {
+    height: 100vh;  /* Ensure it takes the full viewport height */
+    display: flex;
+    flex-direction: column;  /* Stack the content vertically */
+    justify-content: center;  /* Vertically center the content */
+    align-items: center;  /* Horizontally center the content */
+    text-align: center;  /* Center the text */
+    z-index: 1;  /* Ensure it's above the background */
+}
+
+/* Styling for the container inside page-wrapper */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#two, #three {
+	background-color: #818D5D;
+	color: white;
+}
+
+#one, #four {
+	background-color: #ffff;
+	color: #798460;
+}
+
+/* #798460  #f6edd9*/
+
+/* Bootstrap Grid System (Remove Custom Grid Classes) */
+.container-fluid {
+    padding: 2rem;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+p {
+	/*SIZE*/
+}
+
+/* Buttons */
+.btn {
+    border-color: #3A5743 !important;
+	color: #3A5743 !important;	    
+    padding: 0.75rem;
+	margin: 1rem;
+    border-radius: 5px;
+}
+
+.btn:hover {
+	background-color: #3A5743 !important;
+	color: white !important;
+    border-color: white !important;
+}
+
+/* Forms */
+.form-control {
+    background-color: #F6F3E6;
+    color: #D2A544;
+}
+
+.footer {
+	background-color: #D2A544;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
