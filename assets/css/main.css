@@ -20,7 +20,7 @@ body {
     background-color: #D2A544;
     color: #F6F3E6;
     font-family: 'Xarrovv', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.6;
 	height: 100%;
 }
@@ -83,6 +83,9 @@ body {
 #one, #four {
 	background-color: #ffff;
 	color: #798460;
+    min-height: 20vh;
+    justify-content: center;  /* Vertically center the content */
+    align-items: center;  /* Horizontally center the content */
 }
 
 /* #798460  #f6edd9*/
@@ -93,15 +96,16 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
+h1 {
+    font-size: 90px !important;
+}
+
+h2, h3, h4, h5, h6 {
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.1em;
 }
 
-p {
-	/*SIZE*/
-}
 
 /* Buttons */
 .btn {
@@ -124,8 +128,9 @@ p {
     color: #D2A544;
 }
 
-.footer {
-	background-color: #D2A544;
+#footer {
+	
+    padding-top: 2.5vh;
 }
 
 /* Responsive Adjustments */
