@@ -180,12 +180,43 @@ h2, h3, h4, h5, h6 {
 /* Forms */
 .form-control {
     background-color: #F6F3E6;
-    color: #D2A544;
+    color: #798460;
 }
+
+#myForm, #ModalLabel, #myModal {
+    color: #3A5743;
+}
+
+
+.tooltip-img {
+    position: relative;
+    display: inline-block;
+}
+.tooltip-img .tooltiptext {
+    visibility: hidden;
+    width: 80px;
+    background-color: #3A5743;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 30%; /* Adjusted to position the tooltip closer to the image */
+    left: 50%;
+    margin-left: -40px; /* Center the tooltip */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.tooltip-img:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
 
 #footer {
 	
-    padding-top: 2.5vh;
+    padding: 2.5vh;
 }
 
 /* Responsive Adjustments */
