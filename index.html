@@ -103,40 +103,45 @@
         <div class="container-fluid" id="one">
             <div class="row align-items-center justify-content-center text-center">
                 <h2> O NOSSO CASAMENTO </h2>
-                <p> 31 de Maio de 2025 pelas 17h</p>
+                <p> 31 de Maio de 2025</p>
             </div>
             <div class="row align-items-center justify-content-center text-center">
-                <div class="col-md-6">
+                <div class="col-6" style="padding-top: 2vh;">
                     <h4>Cerimónia</h4>
                     <p>Capela de Rio Frio</p>
-                    <img src="images/Capela_de_Rio_Frio.jpg" alt="capela de rio frio" class="img-fluid w-50"/>
+                    <img src="images/Capela_de_Rio_Frio.jpg" alt="capela de rio frio" class="img-fluid w-25"/>
                     <p> </p>
-                    <a href="https://maps.app.goo.gl/WbASEQsC8aPG6BYu5" type="button" class="btn btn-lg btn-outline-secondary" tabindex="-1" role="button" aria-disabled="true">Como Chegar</a>
+                    <a href="https://maps.app.goo.gl/WbASEQsC8aPG6BYu5" type="button" class="btn btn-sm btn-outline-secondary" tabindex="-1" role="button" aria-disabled="true">Como Chegar</a>
                 </div>
-                <div class="col-md-6">
+                <div class="col-6"  style="padding-top: 2vh;">
                     <h4>Cocktail</h4>
                     <p>Palácio de Rio Frio</p>
-                    <img src="images/palacio.jpg" alt="palacio de rio frio" class="img-fluid w-50"/>
+                    <img src="images/palacio.jpg" alt="palacio de rio frio" class="img-fluid w-25"/>
                     <p> </p>
-                    <a href="https://maps.app.goo.gl/dYyJyvwgVJZyB6vs5" type="button" class="btn btn-lg btn-outline-secondary" tabindex="-1" role="button" aria-disabled="true">Como Chegar</a>
+                    <a href="https://maps.app.goo.gl/dYyJyvwgVJZyB6vs5" type="button" class="btn btn-sm btn-outline-secondary" tabindex="-1" role="button" aria-disabled="true">Como Chegar</a>
                 </div>
             </div>
         </div>
+                
 
         <!-- Three -->
         <div class="container-fluid" id="three">
-            <div class="row align-items-center justify-content-center text-center">
-                <h2> LISTA DE PRESENTES </h2>
-                <p> O melhor presente que nos podem dar é partilhar este dia tão importante connosco. <br>
+            <div class="row align-items-center justify-content-center">
+                <div class="col-12 text-left text-md-center">
+                    <h2> LISTA DE PRESENTES </h2>
+                    <p><b> O melhor presente que nos podem dar é partilhar este dia tão importante connosco. <br>
                     Ainda assim, ficamos muito contentes e agradecidos se quiserem de alguma maneira contribuir para a nossa lua de mel ou nos ajudar a montar a nossa casa.
-                </p>
+                    </b></p>
+                </div>
             </div>
-
-            <div class="row align-items-center justify-content-center text-center">
-                <h2> CASA </h2>
-                <p> Quem casa quer, casa! <br>
+        
+            <div class="row align-items-center justify-content-center" style="padding-top: 5vh;">
+                <div class="col-12 text-left text-md-center">
+                    <h2> CASA </h2>
+                    <p> Quem casa quer, casa! <br>
                     Queremos muito ter uma casa confortável para começar a nossa familia e para receber sempre muito bem as pessoas de quem tanto gostamos.
-                </p>
+                    </p>
+                </div>
             </div>
             
             <div class="row align-items-center justify-content-center text-center" style="padding: 2.5vh;">
@@ -212,15 +217,16 @@
                         <p>Faqueiro | 1500€</p>
                     </div>
                 </div>
-                <p></p>
             </div>
             
 
-            <div class="row align-items-center justify-content-center text-center">
-                <h2> LUA DE MEL </h2>
-                <p> Quem casa também quer uma viagem de sonho para mais tarde recordar! <br>
-                    Vamos viajar dez dias de carro pela Namíbia, sempre foi um sonho nosso ir a Africa e pareceu-nos a altura perfeita. 
-                </p>
+            <div class="row align-items-center justify-content-center">
+                <div class="col-12 text-left text-md-center">
+                    <h2> LUA DE MEL </h2>
+                    <p> Quem casa também quer uma viagem de sonho para mais tarde recordar! <br>
+                        Vamos viajar dez dias de carro pela Namíbia, sempre foi um sonho nosso ir a Africa e pareceu-nos a altura perfeita. 
+                    </p>
+                </div>
             </div>
 
             <div class="row align-items-center justify-content-center text-center" style="padding: 2.5vh;">
@@ -245,11 +251,13 @@
         
         <!-- Confirm Presence -->
         <div class="container-fluid" id="four">
-            <div class="row align-items-center justify-content-center text-center">
-                <h2> CONFIRMAR PRESENÇA <a href="">AQUI</a> </h2>
-                <p>Agradecemos que confirme a sua presença até ao dia <u>1 de abril de 2025. </u></p>
+            <div class="row align-items-center justify-content-center">
+                <div class="col-12 text-left text-md-center">
+                    <h2> CONFIRMAR PRESENÇA <a href="" id="aqui">AQUI</a> </h2>
+                    <p>Agradecemos que confirme a sua presença até ao dia 1 de abril de 2025.</p>
+                </div>
             </div>
-        </div>
+        </div>        
 
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -314,10 +322,14 @@
                 body: data,
                 })
                 .then(() => {
-                alert("Obrigada! :)");
+                alert("Obrigada! 😊");
                 })
             });
             });
          </script>
+         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     
     </body>
 </html>

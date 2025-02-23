@@ -67,6 +67,9 @@ body {
         object-fit: cover;
         
     }
+    h1 {
+        font-size: 5vw !important;
+    }
 }
 
 /* iPhone 6/7/8 */
@@ -75,12 +78,19 @@ body {
         object-fit: cover;
         transform: translateY(0vh);
     }
+    h1 {
+        font-size: 5vw;
+        white-space: nowrap;
+    }
 }
 
 /* iPhone 6/7/8 Plus */
 @media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
     .video-container video {
         height: 100%;
+    }
+    h1 {
+        font-size: 5vw;
     }
 }
 
@@ -90,6 +100,12 @@ body {
     .video-container video {
         transform: translateY(0vh) scale(1);
     }
+
+    h1 {
+        font-size: 3vw;
+        white-space: nowrap;
+    }
+
 }
 
 /* Laptops */
@@ -130,12 +146,12 @@ body {
     width: 100%;
 }
 
-#two, #three {
+#one, #four {
 	background-color: #818D5D;
 	color: white;
 }
 
-#one, #four {
+#two, #three {
 	background-color: #ffff;
 	color: #798460;
     min-height: 20vh;
@@ -152,7 +168,8 @@ body {
 
 /* Typography */
 h1 {
-    font-size: 90px !important;
+    font-size: 10vw; /* Responsive font size using viewport width units */
+    white-space: nowrap;
 }
 
 h2, h3, h4, h5, h6 {
@@ -161,19 +178,28 @@ h2, h3, h4, h5, h6 {
     letter-spacing: 0.1em;
 }
 
+#aqui{
+    color: white !important;
+    text-decoration: none !important;
+}
+
+#aqui:hover{
+    text-decoration: underline !important;
+}
+
 
 /* Buttons */
 .btn {
-    border-color: #3A5743 !important;
-	color: #3A5743 !important;	    
+    border-color: white !important;
+	color: white !important;	    
     padding: 0.75rem;
 	margin: 1rem;
     border-radius: 5px;
 }
 
 .btn:hover {
-	background-color: #3A5743 !important;
-	color: white !important;
+	background-color: white !important;
+	color: #3A5743 !important;
     border-color: white !important;
 }
 
@@ -187,6 +213,21 @@ h2, h3, h4, h5, h6 {
     color: #3A5743;
 }
 
+.carousel-item {
+    display: none;
+    flex: 1 0 33.33%;
+}
+.carousel-item.active {
+    display: block;
+}
+.carousel-inner {
+    display: flex;
+    flex-wrap: nowrap;
+}
+.carousel-item img {
+    width: 100%;
+    height: auto;
+}
 
 .tooltip-img {
     position: relative;
@@ -217,11 +258,4 @@ h2, h3, h4, h5, h6 {
 #footer {
 	
     padding: 2.5vh;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 1.5rem;
-    }
 }
