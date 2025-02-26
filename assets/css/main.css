@@ -61,7 +61,7 @@ body {
     z-index: 0;
 }
 
-@media only screen and (min-device-width: 100px) and (max-device-width: 374px) {
+@media only screen and (min-device-width: 100px) and (max-device-width: 750px) {
     .video-container video {
         
         object-fit: cover;
@@ -69,29 +69,28 @@ body {
     }
     h1 {
         font-size: 5vw !important;
-    }
-}
-
-/* iPhone 6/7/8 */
-@media only screen and (min-device-width: 375px) and (max-device-width: 667px) {
-    .video-container video {
-        object-fit: cover;
-        transform: translateY(0vh);
-    }
-    h1 {
-        font-size: 5vw;
         white-space: nowrap;
     }
-}
 
-/* iPhone 6/7/8 Plus */
-@media only screen and (min-device-width: 414px) and (max-device-width: 736px) {
-    .video-container video {
-        height: 100%;
+    #palacio, #capela{
+        width: 50vh;
     }
-    h1 {
-        font-size: 5vw;
-    }
+
+    .with-line::after {
+        content: "";
+        display: block;
+        width: 99%;
+        height: 1px;
+        background-color: rgb(121, 132, 96, 0.3);
+        position: absolute;
+        bottom: 20%;
+        left: 0%;
+      }
+
+      .heading-responsive {
+        font-size: 16px;
+      }
+
 }
 
 
@@ -105,6 +104,23 @@ body {
         font-size: 3vw;
         white-space: nowrap;
     }
+    #palacio, #capela{
+        width: 25vh;
+    }
+
+    .with-line::after {
+        content: "";
+        display: block;
+        width: 33%;
+        height: 1px;
+        background-color: rgb(121, 132, 96, 0.3);
+        position: absolute;
+        bottom: 20%;
+        left: 33%;
+      }
+      .heading-responsive {
+        font-size: 18px;
+      }
 
 }
 
@@ -112,8 +128,23 @@ body {
 @media only screen and (min-device-width: 1366px) and (max-device-width: 1920px) {
     .video-container video {
         object-fit: contain;
-        transform: translateY(0vh);
     }
+    #palacio, #capela{
+        width: 25vh;
+    }
+    .with-line::after {
+        content: "";
+        display: block;
+        width: 33%;
+        height: 1px;
+        background-color: rgb(121, 132, 96, 0.3);
+        position: absolute;
+        bottom: 20%;
+        left: 33%;
+      }
+      .heading-responsive {
+        font-size: 18px;
+      }
 }
 
 /* Large screens (21-27 inches) */
@@ -121,6 +152,23 @@ body {
     .video-container video {
         object-fit: fill;  
     }
+    #palacio, #capela{
+        width: 25vh;
+    }
+    .with-line::after {
+        content: "";
+        display: block;
+        width: 33%;
+        height: 1px;
+        background-color: rgb(121, 132, 96, 0.3);
+        position: absolute;
+        bottom: 20%;
+        left: 33%;
+      }
+      .heading-responsive {
+        font-size: 18px;
+
+      }
 }
 
 
@@ -182,25 +230,14 @@ h3, h4, h5, h6 {
     letter-spacing: 0.1em;
 }
 
-.with-line::after {
-  content: "";
-  display: block;
-  width: 33%;
-  height: 1px;
-  background-color: rgb(121, 132, 96, 0.3);
-  position: absolute;
-  bottom: 20%;
-  left: 33%;
-}
+
+
 
 #aqui{
     color: white !important;
-    text-decoration: none !important;
+    
 }
 
-#aqui:hover{
-    text-decoration: underline !important;
-}
 
 
 /* Buttons */
