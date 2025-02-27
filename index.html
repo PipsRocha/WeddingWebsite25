@@ -5,8 +5,13 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="assets/css/main.css" />
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> <!-- Load jQuery first -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 	</head>
     <body>
         <div class="video-container">
@@ -51,42 +56,6 @@
                     document.getElementById("demo").innerHTML = days + " dias " + hours + ":" + minutes + ":" + seconds;
                 }
             }, 1000);
-        </script>
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                var images = document.querySelectorAll(".clickable-image");
-                var modal = document.getElementById("myModal");
-                var form = document.getElementById("presentForm");
-                var articleSelect = document.getElementById("article");
-                
-                images.forEach(function(image) {
-                    var option = document.createElement("option");
-                    option.value = image.alt;
-                    option.text = image.alt;
-                    articleSelect.appendChild(option);
-                    
-                    image.onclick = function() {
-                        modal.querySelector("#name").value = "";
-                        modal.querySelector("#value").value = "";
-                        modal.querySelector("#message").value = "";
-                        modal.querySelector("#article").value = image.alt;
-                        $('#myModal').modal('show');
-                    }
-                });
-                
-                document.querySelectorAll(".close").forEach(function(closeBtn) {
-                    closeBtn.onclick = function() {
-                        $('#myModal').modal('hide');
-                    }
-                });
-
-                window.onclick = function(event) {
-                    if (event.target == modal) {
-                        $('#myModal').modal('hide');
-                    }
-                }
-            });
         </script>
 
         <!-- Two -->
@@ -144,85 +113,239 @@
                 </div>
             </div>
               
-
-            <div class="row align-items-center justify-content-center text-center" style="padding: 2.5vh;">
-                    <div class="col tooltip-img">
-                        <img src="images/basecopos.jpeg" class="clickable-image" alt="Bases de Copos" style="height: 20vh;">
-                        <span class="tooltiptext">OFERECER</span>
-                        <p>Bases de Copos | 115€</p>
+        <div class="row" style="padding-top: 2.5vh;">
+            <div id="carouselExampleControls" class="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="images/basecopos.jpeg" class="d-block w-100" alt="Bases de Copos">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">Bases de Copos | 115€</h6>
+                            <button id="clickable" class="btn clickable btn-outline-secondary">OFERECER</button>
+                        </div>
                     </div>
-                    <div class="col tooltip-img">
-                        <img src="images/candeeiro.jpg" class="clickable-image" alt="Candeeiros" style="height: 20vh;">
-                        <span class="tooltiptext">OFERECER</span>
-                        <p>Par candeeiros | 120€</p>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="images/candeeiro.jpg" class="d-block w-100" alt="Candeeiro">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">Par de Candeeiros | 120€</h6>
+                            <button id="clickable" class="btn clickable btn-outline-secondary">OFERECER</button>
+                        </div>
                     </div>
-                    <div class="col tooltip-img">
-                        <img src="images/coluna.jpg" class="clickable-image" alt="Coluna Marshall" style="height: 20vh;">
-                        <span class="tooltiptext">OFERECER</span>
-                        <p>Coluna | 300€</p>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                        <div class="img-wrapper">
+                                <img src="images/coluna.jpg" class="d-block w-100" alt="Coluna">
+                            </div>
+                        <div class="card-body">
+                            <h6 class="card-title">Coluna | 300€</h6>
+                            <button id="clickable" class="btn clickable btn-outline-secondary">OFERECER</button>
+                        </div>
                     </div>
-                    <div class="col tooltip-img">
-                        <img src="images/dyson.png" class="clickable-image" alt="Aspirador Dyson" style="height: 20vh;">
-                        <span class="tooltiptext">OFERECER</span>
-                        <p>Aspirador | 800€</p>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="images/dyson.png" class="d-block w-100" alt="Aspirador Dyson">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">Aspirador | 800€</h6>
+                            <button id="clickable" class="btn clickable btn-outline-secondary">OFERECER</button>
+                        </div>
                     </div>
-                    <div class="col tooltip-img">
-                        <img src="images/facas.jpg" class="clickable-image" alt="Bloco de Facas" style="height: 20vh;">
-                        <span class="tooltiptext">OFERECER</span>
-                        <p>Conjunto Facas | 300€</p>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="images/facas.jpg" class="d-block w-100" alt="Conjunto de Facas">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">Conjunto de Facas | 300€</h6>
+                            <button id="clickable" class="btn clickable btn-outline-secondary">OFERECER</button>
+                        </div>
                     </div>
-                    <div class="col tooltip-img">
-                        <img src="images/frigideiras.jpg" class="clickable-image" alt="Conjunnto de Frigideiras" style="height: 20vh;">
-                        <span class="tooltiptext">OFERECER</span>
-                        <p>Frigideiras | 150€</p>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="images/frigideiras.jpg" class="d-block w-100" alt="Frigideiras">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">Frigideiras | 150€</h6>
+                            <button id="clickable" class="btn clickable btn-outline-secondary">OFERECER</button>
+                        </div>
                     </div>
-                    <div class="col tooltip-img">
-                        <img src="images/grelhador.jpg" class="clickable-image" alt="Grelhador" style="height: 20vh;">
-                        <span class="tooltiptext">OFERECER</span>
-                        <p>Grelhador | 150€</p>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="images/grelhador.jpg" class="d-block w-100" alt="Grelhador">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">Grelhador | 150€</h6>
+                            <button id="clickable" class="btn clickable btn-outline-secondary">OFERECER</button>
+                        </div>
                     </div>
-                <div class="row align-items-center justify-content-center text-center">
-                    <div class="col tooltip-img">
-                        <img src="images/cama.jpg" class="clickable-image" alt="Jogo de Cama" style="height: 20vh;">
-                        <span class="tooltiptext">OFERECER</span>
-                        <p>Jogo de cama | 250€</p>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="images/cama.jpg" class="d-block w-100" alt="Jogo de Cama">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">Jogo de Cama | 250€</h6>
+                            <button id="clickable" class="btn clickable btn-outline-secondary">OFERECER</button>
+                        </div>
                     </div>
-                    <div class="col tooltip-img">
-                        <img src="images/mesa.jpg" class="clickable-image" alt="Mesa de Jantar" style="height: 20vh;">
-                        <span class="tooltiptext">OFERECER</span>
-                        <p>Mesa de Jantar | 1800€</p>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="images/mesa.jpg" class="d-block w-100" alt="Mesa de Jantar">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">Mesa de Jantar | 1800€</h6>
+                            <button id="clickable" class="btn clickable btn-outline-secondary">OFERECER</button>
+                        </div>
                     </div>
-                    <div class="col tooltip-img">
-                        <img src="images/panelas.jpg" class="clickable-image" alt="Panela de Ferro" style="height: 20vh;">
-                        <span class="tooltiptext">OFERECER</span>
-                        <p>Panela de Ferro | 180€</p>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="images/panelas.jpg" class="d-block w-100" alt="Panela de Ferro">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">Panela de Ferro | 180€</h6>
+                            <button id="clickable" class="btn clickable btn-outline-secondary">OFERECER</button>
+                        </div>
                     </div>
-                    <div class="col tooltip-img">
-                        <img src="images/sofa.jpg" class="clickable-image" alt="Sofa" style="height: 20vh;">
-                        <span class="tooltiptext">OFERECER</span>
-                        <p>Sofa | 1800€</p>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="images/sofa.jpg" class="d-block w-100" alt="Sofa">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">Sofa | 1800€</h6>
+                            <button id="clickable" class="btn clickable btn-outline-secondary">OFERECER</button>
+                        </div>
                     </div>
-                    <div class="col tooltip-img">
-                        <img src="images/tapete.jpg" class="clickable-image" alt="Tapete" style="height: 20vh;">
-                        <span class="tooltiptext">OFERECER</span>
-                        <p>Tapete | 90€</p>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="images/tapete.jpg" class="d-block w-100" alt="Tapete">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">Tapete | 90€</h6>
+                            <button id="clickable" class="btn clickable btn-outline-secondary">OFERECER</button>
+                        </div>
                     </div>
-                    <div class="col tooltip-img">
-                        <img src="images/bimby.jpg" class="clickable-image" alt="Bimby" style="height: 20vh;">
-                        <span class="tooltiptext">OFERECER</span>
-                        <p>Bimby | 1200€</p>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="images/bimby.jpg" class="d-block w-100" alt="Bimby">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">Bimby | 1200€</h6>
+                            <button id="clickable" class="btn clickable btn-outline-secondary">OFERECER</button>
+                        </div>
                     </div>
-                    <div class="col tooltip-img">
-                        <img src="images/faqueiro.jpg" class="clickable-image" alt="faqueiro" style="height: 20vh;">
-                        <span class="tooltiptext">OFERECER</span>
-                        <p>Faqueiro | 1500€</p>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="card">
+                        <div class="img-wrapper">
+                            <img src="images/faqueiro.jpg" class="d-block w-100" alt="Faqueiro">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title">Faqueiro | 1500€</h6>
+                            <button id="clickable" class="btn clickable btn-outline-secondary">OFERECER</button>
+                        </div>
                     </div>
+                  </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
             </div>
-            
+            <script>
+                var carouselWidth = $(".carousel-inner")[0].scrollWidth;
+                var cardWidth = $(".carousel-item").width();
+                var scrollPosition = 0;
+        
+                $(".carousel-control-next").on("click", function () {
+                    console.log("next")
+                    if (scrollPosition < (carouselWidth - cardWidth * 4)) {
+                        scrollPosition += cardWidth;  
+                        $(".carousel-inner").animate({ scrollLeft: scrollPosition },600); 
+                    } else {
+                        scrollPosition = 0;
+                        $(".carousel-inner").animate({ scrollLeft: scrollPosition },600); //scroll left
+                    }
+                });
+                $(".carousel-control-prev").on("click", function () {
+                    if (scrollPosition > 0) {
+                        scrollPosition -= cardWidth;
+                        $(".carousel-inner").animate(
+                        { scrollLeft: scrollPosition },
+                        600
+                        );
+                    } 
+                });
 
-            <div class="row align-items-center justify-content-center">
-                <div class="col-12 text-left text-md-center" style="padding-top: 2.5vh;">
+                //Modal
+                document.addEventListener("DOMContentLoaded", function() {
+                var images = document.querySelectorAll(".clickable");
+                var modal = document.getElementById("myModal");
+                var form = document.getElementById("presentForm");
+                var articleSelect = document.getElementById("article");
+                
+                images.forEach(function(image) {
+                    var option = document.createElement("option");
+                    option.value = image.alt;
+                    option.text = image.alt;
+                    articleSelect.appendChild(option);
+                    
+                    image.onclick = function() {
+                        modal.querySelector("#name").value = "";
+                        modal.querySelector("#value").value = "";
+                        modal.querySelector("#message").value = "";
+                        modal.querySelector("#article").value = image.alt;
+                        $('#myModal').modal('show');
+                    }
+                });
+                
+                document.querySelectorAll(".close").forEach(function(closeBtn) {
+                    closeBtn.onclick = function() {
+                        $('#myModal').modal('hide');
+                    }
+                });
+
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        $('#myModal').modal('hide');
+                    }
+                }
+            });
+            </script>
+            
+        
+
+            <div class="row align-items-center justify-content-center" style="padding-top: 5vh;">
+                <div class="col-12 text-left text-md-center">
                     <h2 class="with-line" style="position: relative; padding-bottom: 1vh;"> LUA DE MEL </h2>
                     <p> Quem casa também quer uma viagem de sonho para mais tarde recordar! </p>
                     <p> Vamos viajar dez dias de carro pela Namíbia, sempre foi um sonho nosso ir a Africa e pareceu-nos a altura perfeita. 
@@ -230,24 +353,67 @@
                 </div>
             </div>
 
-            <div class="row align-items-center justify-content-center text-center" style="padding: 2.5vh;">
-                <div class="col-md-3 tooltip-img">
-                    <img src="images/deadvlei-namibia-shutterstock_421198501.jpg" class="clickable-image" alt="Deserto Namibia" style="width: 25vh;">
-                    <span class="tooltiptext">OFERECER</span>
+            <div class="row" style="padding-top: 2.5vh;">
+                <div id="carouselExampleControls" class="carousel">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="images/Namibia-13-main.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Tour | 115€</h6>
+                                <button id="clickable" class="btn clickable btn-outline-secondary">OFERECER</button>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="images/deadvlei-namibia-shutterstock_421198501.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Tour | 120€</h6>
+                                <button id="clickable" class="btn clickable btn-outline-secondary">OFERECER</button>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="images/categoriesshutterstock399642748_1_crop1920x900.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Carro | 300€</h6>
+                                <button id="clickable" class="btn clickable btn-outline-secondary">OFERECER</button>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="images/campsite.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Alojamento | 800€</h6>
+                                <button id="clickable" class="btn clickable btn-outline-secondary">OFERECER</button>
+                            </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="card">
+                            <div class="img-wrapper">
+                                <img src="images/safaris-offer-close-up.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h6 class="card-title">Safari | 800€</h6>
+                                <button id="clickable" class="btn clickable btn-outline-secondary">OFERECER</button>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-md-3 tooltip-img">
-                    <img src="images/categoriesshutterstock399642748_1_crop1920x900.jpg" class="clickable-image" alt="Tour Carro" style="width: 25vh;">
-                    <span class="tooltiptext">OFERECER</span>
-                </div>
-                <div class="col-md-3 tooltip-img">
-                    <img src="images/safaris-offer-close-up.jpg" class="clickable-image" alt="Safari" style="width: 25vh;">
-                    <span class="tooltiptext">OFERECER</span>
-                </div>
-                <div class="col-md-3 tooltip-img">
-                    <img src="images/Namibia-13-main.jpg" class="clickable-image" alt="Costa do Deserto" style="width: 25vh;">
-                    <span class="tooltiptext">OFERECER</span>
-                </div>
-            </div>
         </div>
         
         <!-- Confirm Presence -->
@@ -292,7 +458,7 @@
                                 </select>
                             </div>
                             <div class="form-group float-right text-right pull-right">
-                                <button type="submit" class="btn btn-outline-secondary">Enviar</button>
+                                <button type="submit" class="btn btn-outline-secondary" id="clickable">Enviar</button>
                             </div>
                         </form>
                     </div>
@@ -304,7 +470,7 @@
         <footer class="align-items-center justify-content-center text-center" id="footer">
             
             <h3>Francisca e Rodrigo</h3>
-            <h5>910883598 | 915 110 878</h5>
+            <h5>910 883 598 | 915 110 878</h5>
             
             <p class="fs-6" style="padding-top: 2.5vh;"> &copy; Pipa Rocha </p>
         </footer>
@@ -326,9 +492,6 @@
                 })
             });
             });
-         </script>
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+         </script>        
     </body>
 </html>
