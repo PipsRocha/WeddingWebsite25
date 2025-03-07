@@ -65,6 +65,7 @@
             </div>
             <div class="row align-items-center justify-content-center text-center">
                 <div class="col-6 custom-col-left">
+                    <h4>Pelas Madrinhas</h4>
                     <p>Desde pequenina que é famosa,<br>
                         Sempre pronta a opinar.<br>
                         Não esquecendo que é charmosa,<br>
@@ -96,35 +97,9 @@
                         Era com o Ro que ia casar
                 </div>
                 <div class="col-6 custom-col-right">
-                    <p>Desde pequenina que é famosa,<br>
-                        Sempre pronta a opinar.<br>
-                        Não esquecendo que é charmosa,<br>
-                        E isso ninguém o pode negar<br>
-                        
-                        Com amigos à mesa, a festa é garantida,<br>
-                        Entre petiscos, brindes e boa comida.<br>
-                        Se há conversa e pratos a rodar,<br>
-                        Com a Kika podemos sempre contar!<br>
-                    
-                        Decidida e sem papas na língua,<br>
-                        Desenrascada como ninguém,<br>
-                        Com a Kika não há meio-termo,<br>
-                        Opiniões não faltam, isso sabem bem!<br>
-                        
-                        De Soltroia a Lisboa,<br>
-                        uma amizade de muitos anos,<br>
-                        diziam-se melhores amigos,<br>
-                        mas havia outros planos.<br>
-                        
-                        Em 2019, sem avisar,<br>
-                        A Kika e o Ro começam a namorar.<br>
-                        Entre risos e abraços no calor do verão,<br>
-                        Juntos descobriram esta grande paixão<br>
-                        
-                        E agora lá vai ela,<br>
-                        Nesta história de encantar,<br>
-                        Quem diria que no fim,<br>
-                        Era com o Ro que ia casar</p>
+                    <h4>Pelos Padrinhos</h4>
+                    <p></p>
+                    <p></p>
                 </div>
             </div>
         </div>
@@ -343,30 +318,6 @@
               </div>
             </div>
             <script>
-                var carouselWidth = $(".carousel-inner")[0].scrollWidth;
-                var cardWidth = $(".carousel-item").width();
-                var scrollPosition = 0;
-        
-                $(".carousel-control-next").on("click", function () {
-                    console.log("next")
-                    if (scrollPosition < (carouselWidth - cardWidth * 4)) {
-                        scrollPosition += cardWidth;  
-                        $(".carousel-inner").animate({ scrollLeft: scrollPosition },600); 
-                    } else {
-                        scrollPosition = 0;
-                        $(".carousel-inner").animate({ scrollLeft: scrollPosition },600); //scroll left
-                    }
-                });
-                $(".carousel-control-prev").on("click", function () {
-                    if (scrollPosition > 0) {
-                        scrollPosition -= cardWidth;
-                        $(".carousel-inner").animate(
-                        { scrollLeft: scrollPosition },
-                        600
-                        );
-                    } 
-                });
-
                 // Modal
                 document.addEventListener("DOMContentLoaded", function() {
                     var buttons = document.querySelectorAll(".clickable");
@@ -409,41 +360,50 @@
             </script>
             
         
-
             <div class="row align-items-center justify-content-center" style="padding-top: 5vh;">
                 <div class="col-12 text-left text-md-center">
-                    <h2 class="with-line" style="position: relative; padding-bottom: 1vh;"> LUA DE MEL </h2>
-                    <p> Quem casa também quer uma viagem de sonho para mais tarde recordar! </p>
-                    <p> Vamos viajar dez dias de carro pela Namíbia, sempre foi um sonho nosso ir a Africa e pareceu-nos a altura perfeita. 
-                    </p>
+                    <h2 class="with-line" style="position: relative; padding-bottom: 1vh;">LUA DE MEL</h2>
+                    <p>Quem casa também quer uma viagem de sonho para mais tarde recordar!</p>
+                    <p>Vamos viajar dez dias de carro pela Namíbia, sempre foi um sonho nosso ir a África e pareceu-nos a altura perfeita.</p>
                 </div>
             </div>
 
             <div class="row" style="padding-top: 2.5vh;">
-                <div id="carouselExampleControls" class="carousel">
-                    <div class="carousel-inner">
-                      <div class="carousel-item active">
+                <div id="carousel2" class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
                         <div class="card">
-                            <div class="img-wrapper">
-                                <img src="images/Namibia-13-main.jpg" class="d-block w-100" alt="Tour Deserto">
-                            </div>
-                            <div class="card-body">
-                                <h6 class="card-title">Tour | 115€</h6>
-                                <button id="clickable" class="btn clickable btn-outline-secondary">OFERECER</button>
+                                <div class="img-wrapper">
+                                    <img src="images/Namibia-13-main.jpg" class="d-block w-100" alt="Tour Namibia">
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="card-title">Tour | 115</h6>
+                                    <button id="clickable" class="btn clickable btn-outline-secondary">OFERECER</button>
+                                </div>
+                        </div>
+                    </div>
+                        <div class="carousel-item">
+                            <div class="card">
+                                <div class="img-wrapper">
+                                    <img src="images/deadvlei-namibia-shutterstock_421198501.jpg" class="d-block w-100" alt="Tour">
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="card-title">Tour | 120€</h6>
+                                    <button id="clickable" class="btn clickable btn-outline-secondary">OFERECER</button>
+                                </div>
                             </div>
                         </div>
-                      </div>
-                      <div class="carousel-item">
-                        <div class="card">
-                            <div class="img-wrapper">
-                                <img src="images/deadvlei-namibia-shutterstock_421198501.jpg" class="d-block w-100" alt="Tour">
-                            </div>
-                            <div class="card-body">
-                                <h6 class="card-title">Tour | 120€</h6>
-                                <button id="clickable" class="btn clickable btn-outline-secondary">OFERECER</button>
+                        <div class="carousel-item">
+                            <div class="card">
+                                <div class="img-wrapper">
+                                    <img src="images/resort.jpg" class="d-block w-100" alt="Tour">
+                                </div>
+                                <div class="card-body">
+                                    <h6 class="card-title">Tour | 120€</h6>
+                                    <button id="clickable" class="btn clickable btn-outline-secondary">OFERECER</button>
+                                </div>
                             </div>
                         </div>
-                      </div>
                       <div class="carousel-item">
                         <div class="card">
                             <div class="img-wrapper">
@@ -477,16 +437,57 @@
                             </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
                 </div>
-        </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel2" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel2" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+                </div>
+            </div>
+            </div>        
+
+                <script>
+                $(document).ready(function () {
+                function initCarouselControls(carouselId) {
+                    var carouselInner = $(`#${carouselId} .carousel-inner`); // Target the specific carousel
+                    var cardWidth = $(`#${carouselId} .carousel-item`).outerWidth(true);
+                    var scrollPosition = 0;
+
+                    $(`#${carouselId} .carousel-control-next`).on("click", function () {
+                        if (scrollPosition < (carouselInner[0].scrollWidth - cardWidth * 4)) {
+                            scrollPosition += cardWidth;
+                            carouselInner.animate({ scrollLeft: scrollPosition }, 600);
+                        } else {
+                            scrollPosition = 0;
+                            carouselInner.animate({ scrollLeft: scrollPosition }, 600);
+                        }
+                    });
+
+                    $(`#${carouselId} .carousel-control-prev`).on("click", function () {
+                        if (scrollPosition > 0) {
+                            scrollPosition -= cardWidth;
+                            carouselInner.animate({ scrollLeft: scrollPosition }, 600);
+                        }
+                    });
+                }
+
+                // Initialize controls for both carousels
+                initCarouselControls("carouselExampleControls");
+                initCarouselControls("carousel2");
+            });
+
+            </script>
         
         <!-- Confirm Presence -->
         <div class="container-fluid" id="four">
             <div class="row align-items-center justify-content-center">
                 <div class="col-12 text-center" style="padding: 2vh;">
-                    <h4 class="heading-responsive">Agradecemos que confirme a sua presença <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFp9glsNTivmbYO9Wwc0Q7iuYzYRfPv3pU18zesemlpvMaWw/viewform" id="aqui">aqui</a> até ao dia 1 de abril de 2025.</h4>
+                    <h3 class="heading-responsive">Agradecemos que confirme a sua presença <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFp9glsNTivmbYO9Wwc0Q7iuYzYRfPv3pU18zesemlpvMaWw/viewform" id="aqui">aqui</a> até ao dia 1 de abril de 2025.</h3>
                 </div>
             </div>
         </div>        
