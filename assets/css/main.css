@@ -30,48 +30,40 @@ body {
 /* Background Video */
 .video-container {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+
+
     z-index: -1;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.video-container video {
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    
-    object-fit: fill; /* Ensures video fills the container */
+.video-container img {
+   
+   max-width: 100%;
 }
 
-.video-container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 0;
-}
 
 .custom-col {
     text-align:start;
     vertical-align: top;
     padding-top: 2.5vh;
 }
+h6{
+    font-size: 0.7em !important;
+    white-space: nowrap;
+}
 
 
-@media only screen and (min-device-width: 360px) and (max-device-width: 750px) {
-    .video-container video {
+@media only screen and (min-device-width: 300px) and (max-device-width: 750px) {
+    .video-container img {
+   
+        height: 100vh;
+        overflow: hidden;
         object-fit: cover;
-    }
+     }
+
+
     h1 {
         font-size: 10vw !important;
         white-space: nowrap;
@@ -115,10 +107,14 @@ body {
 
 
 /* iPad */
-@media only screen and (min-device-width: 768px) and (max-device-width: 1366px) {
-    .video-container video {
-        transform: translateY(0vh) scale(1);
-    }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1365px) {
+
+    .video-container img {
+   
+        height: 100vh;
+        overflow: hidden;
+        object-fit:cover;
+     }
 
     h1 {
         font-size: 5vw !important;
@@ -161,9 +157,7 @@ body {
 
 /* Laptops */
 @media only screen and (min-device-width: 1366px) and (max-device-width: 1920px) {
-    .video-container video {
-        object-fit: contain;
-    }
+
     h1 {
         font-size: 5vw !important;
         white-space: nowrap;
@@ -180,25 +174,20 @@ body {
         font-size: 18px;
       }
       .custom-col-left, .custom-col-left-poem {
-        padding-left: 25vh;
+        padding-left: 35vh;
         padding-right: 0vh;
     }
 
     .custom-col-right, .custom-col-right-poem {
         padding-left: 0vh;
-        padding-right: 25vh;
+        padding-right: 35vh;
     }
-    h6{
-        font-size: 1em !important;
-        white-space: nowrap;
-    }
+
 }
 
 /* Large screens (21-27 inches) */
 @media only screen and (min-device-width: 1920px) {
-    .video-container video {
-        object-fit: fill;  
-    }
+
     #palacio, #capela{
         width: 25vh;
     }
@@ -211,13 +200,13 @@ body {
         font-size: 18px;
       }
       .custom-col-left, .custom-col-left-poem  {
-        padding-left: 25vh;
+        padding-left: 35vh;
         padding-right: 0vh;
     }
 
     .custom-col-right, .custom-col-right-poem{
         padding-left: 0vh;
-        padding-right: 25vh;
+        padding-right: 35vh;
     }
 }
 
@@ -329,26 +318,28 @@ h3, h4, h5, h6 {
 
 .carousel-inner {
     padding: 1em;
+    display: flex;
   }
   .card {
     margin: 0 0.5em;
     box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
     border: none;
+    justify-content: center;
+      align-items: center;
   }
   
   
     .carousel-item {
-      margin-right: 0;
+      margin: 0;
       flex: 0 0 15%;
       display: block;
+      
     }
-    .carousel-inner {
-      display: flex;
-    }
+
   
   .card .img-wrapper {
-      max-width: 100%;
-      height: 13em;
+      max-height: auto;
+      height: 5em;
       display: flex;
       justify-content: center;
       align-items: center;
