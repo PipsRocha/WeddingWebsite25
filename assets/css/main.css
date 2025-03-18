@@ -100,7 +100,14 @@ h6{
         white-space: nowrap;
     }
 
+    .ppalacio {
+        padding-top: 4vh;
+        padding-bottom: 3.5vh;
+    }
 
+    .card img {
+        max-width: 100%;
+    }
 }
 
 
