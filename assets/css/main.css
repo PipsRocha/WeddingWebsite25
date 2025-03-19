@@ -105,26 +105,7 @@ h6{
         padding-bottom: 3.5vh;
     }
 
-    .card img {
-        height: 5em;
-    }
 
-    .card {
-        height: 10em;
-        align-items: center;
-        align-content: center;
-        text-align: center;
-      }
-      .card .img-wrapper {
-          height: 5em;
-      }
-      .card img {
-          max-height: auto;
-      }
-
-      .card-body {
-        height: 5em;
-      }
 
     .convite{
         padding-left: 2.5vh;
