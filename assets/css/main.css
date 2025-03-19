@@ -330,12 +330,18 @@ h3, h4, h5, h6 {
     padding: 1em;
     display: flex;
   }
+
+.carousel-item {
+    justify-content: center;
+    align-items: center;
+
+}
   .card {
     margin: 0 0.5em;
     box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
     border: none;
     justify-content: center;
-      align-items: center;
+    align-items: center;
   }
   
   
@@ -348,15 +354,14 @@ h3, h4, h5, h6 {
 
   
   .card .img-wrapper {
-      max-height: auto;
+      
       height: 5em;
       display: flex;
       justify-content: center;
       align-items: center;
+      max-width: 50%;
   }
-  .card img {
-      max-height: 100%;
-  }
+
  
 
 .carousel-control-prev, .carousel-control-next {
